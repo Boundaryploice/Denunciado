@@ -1,0 +1,18 @@
+﻿using Microsoft.AspNetCore.Http;
+
+namespace DenunciaDo.Application.DTOs
+{
+    public class CreateComplaintDto
+    {
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string Detail { get; set; }
+        public string Address { get; set; }
+        public decimal Latitude { get; set; }
+        public decimal Longitude { get; set; }
+        public IFormFile Image { get; set; }
+        public int ComplaintTypeId { get; set; }
+        public int? DistrictId { get; set; }
+        public IFormFileCollection Attachments { get; set; }
+    }
+}

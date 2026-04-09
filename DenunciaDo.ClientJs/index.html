@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denuncia.Do - Plataforma de Denuncias Ciudadanas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <a href="/" id="home-link">
+                        <h1>Denuncia.Do</h1>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="/" class="nav-link" data-page="home">Inicio</a></li>
+                        <li><a href="/denuncias" class="nav-link" data-page="complaints">Denuncias</a></li>
+                        <li><a href="/about" class="nav-link" data-page="about">Sobre Nosotros</a></li>
+                        <li class="auth-links hidden" id="logged-out-links">
+                            <a href="/login" class="nav-link btn btn-outline" data-page="login">Iniciar Sesión</a>
+                            <a href="/register" class="nav-link btn btn-primary" data-page="register">Registrarse</a>
+                        </li>
+                        <li class="dropdown hidden" id="logged-in-links">
+                            <a href="#" class="dropdown-toggle" id="user-menu">
+                                <span id="user-name">Usuario</span>
+                                <img id="user-avatar" src="img/default-avatar.png" alt="Avatar">
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="/profile" class="nav-link" data-page="profile">Mi Perfil</a>
+                                <a href="/my-complaints" class="nav-link" data-page="my-complaints">Mis Denuncias</a>
+                                <a href="/notifications" class="nav-link" data-page="notifications">
+                                    Notificaciones <span class="badge" id="notification-badge">0</span>
+                                </a>
+                                <div class="divider"></div>
+                                <a href="#" id="logout-link">Cerrar Sesión</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main id="main-content">
+            <!-- Content will be dynamically loaded here -->
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Denuncia.Do</h3>
+                        <p>Plataforma de denuncias ciudadanas para mejorar la comunicación entre municipios y comunidades.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Enlaces rápidos</h3>
+                        <ul>
+                            <li><a href="/">Inicio</a></li>
+                            <li><a href="/denuncias">Denuncias</a></li>
+                            <li><a href="/about">Sobre Nosotros</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contacto</h3>
+                        <p>
+                            <i class="fas fa-envelope"></i> info@denuncia.do<br>
+                            <i class="fas fa-phone"></i> +1 809-555-1234<br>
+                            <i class="fas fa-map-marker-alt"></i> Santo Domingo, Rep. Dom.
+                        </p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Denuncia.Do - Todos los derechos reservados</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Modals -->
+        <div class="modal" id="login-modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Iniciar Sesión</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Correo Electrónico</label>
+                        <input type="email" id="login-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Contraseña</label>
+                        <input type="password" id="login-password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                    </div>
+                    <p class="text-center">¿No tienes una cuenta? <a href="/register" class="nav-link" data-page="register">Regístrate</a></p>
+                </form>
+            </div>
+        </div>
+
+        <!-- Toast Notifications -->
+        <div id="toast-container"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/utils/api.js"></script>
+    <script src="js/utils/auth.js"></script>
+    <script src="js/utils/router.js"></script>
+    <script src="js/utils/ui.js"></script>
+    <script src="js/views/home.js"></script>
+    <script src="js/views/complaints.js"></script>
+    <script src="js/views/complaint-detail.js"></script>
+    <script src="js/views/create-complaint.js"></script>
+    <script src="js/views/profile.js"></script>
+    <script src="js/views/my-complaints.js"></script>
+    <script src="js/views/notifications.js"></script>
+    <script src="js/views/about.js"></script>
+    <script src="js/views/login.js"></script>
+    <script src="js/views/register.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

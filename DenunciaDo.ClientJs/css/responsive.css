@@ -1,0 +1,227 @@
+/* responsive.css */
+
+/* Estilos responsivos para pantallas medianas */
+@media (max-width: 992px) {
+    .container {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .features {
+        flex-wrap: wrap;
+    }
+
+    .feature {
+        flex: 0 0 calc(50% - 30px);
+    }
+}
+
+/* Estilos responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .header .container {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+        margin-left: auto;
+    }
+
+    .main-nav {
+        width: 100%;
+        display: none;
+        margin-top: 1rem;
+    }
+
+    .main-nav.show {
+        display: block;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-nav li {
+        margin-left: 0;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .dropdown-menu {
+        position: static;
+        display: block;
+        box-shadow: none;
+        border: none;
+        margin-top: 0.5rem;
+        padding-left: 1rem;
+    }
+
+    .auth-links {
+        margin-top: 1rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .auth-links a {
+        width: 100%;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-section {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    .complaints-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature {
+        flex: 0 0 100%;
+        margin-bottom: 2rem;
+    }
+
+    .complaint-detail-header {
+        flex-direction: column;
+    }
+
+    .complaint-detail-actions {
+        margin-top: 1rem;
+    }
+
+    .tab-list {
+        flex-wrap: wrap;
+    }
+
+    .tab {
+        padding: 0.5rem 1rem;
+    }
+
+    .progress-tracker {
+        flex-direction: column;
+    }
+
+    .progress-tracker::before {
+        display: none;
+    }
+
+    .progress-step {
+        margin-bottom: 1rem;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .progress-step-icon {
+        margin-bottom: 0;
+        margin-right: 1rem;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-avatar {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .filter-item {
+        width: 100%;
+    }
+
+    /* Adapta los cards de denuncias para móviles */
+    .complaint-card {
+        margin-bottom: 1.5rem;
+    }
+
+    .complaint-footer {
+        flex-wrap: wrap;
+    }
+
+    .complaint-meta {
+        margin-bottom: 0.5rem;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .complaint-action {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
+
+/* Estilos responsivos para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        padding: 2rem 0;
+    }
+
+    .section {
+        padding: 2rem 0;
+    }
+
+    .comment {
+        flex-direction: column;
+    }
+
+    .comment-avatar {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .comment-header {
+        flex-direction: column;
+    }
+
+    .comment-date {
+        margin-top: 0.25rem;
+    }
+
+    .comment-replies {
+        margin-left: 1rem;
+    }
+}
